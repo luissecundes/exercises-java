@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.Arrays;
 
-public class Solution {
+public class SolutionArray {
 
 	   public int[] getConcatenation(int[] nums) {
 	        int n = nums.length; // Obtém o tamanho do array nums
@@ -19,7 +19,7 @@ public class Solution {
 	
 
 	public static void main(String[] args) {
-		Solution solution = new Solution();
+		SolutionArray solution = new SolutionArray();
 		
 		   int[] nums1 = {1, 2, 1};
 	        int[] result1 = solution.getConcatenation(nums1);
