@@ -1,37 +1,29 @@
 package exercises;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Testes {
 
-	public static int max(int x, int y, int z) {
-		int aux;
-		if (x > y && x > z) {
-			aux = x;
-		} else if (y > z) {
-			aux = y;
-		} else {
-			aux = z;
-		}
-		return aux;
-	}
-	
-	public static void showResult(int valor) {
-		System.out.println("O maior valor é: " + valor);
-	}
-	
+	public static List<Integer> gradingStudents(List<Integer> grades) {
+		
+		List<Integer> roundedGrades = new ArrayList<>();
+
+        for (int grade : grades) {
+            if (grade < 38 || grade % 5 < 3) {
+                roundedGrades.add(grade);
+            } else {
+                roundedGrades.add((grade / 5 + 1) * 5);
+            }
+        }
+
+        return roundedGrades;
+	    }
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Digite três números: ");
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
-		
-		int maior = max(a, b, c);
-		
-		showResult(maior);
+		Scanner sc = new Scanner(System.in);
 
 		sc.close();
 	}
