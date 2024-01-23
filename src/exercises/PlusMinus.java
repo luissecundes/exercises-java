@@ -3,6 +3,7 @@ package exercises;
 import java.util.Scanner;
 
 public class PlusMinus {
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -30,6 +31,7 @@ public class PlusMinus {
             }
         }
 
+		// Foi necessário um cast para poder exibir os valores necessários.
         double proporcaoPositivos = (double) positivos / tamanho;
         double proporcaoNegativos = (double) negativos / tamanho;
         double proporcaoZeros = (double) zeros / tamanho;
